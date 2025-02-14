@@ -42,7 +42,7 @@ UICorner.Parent = MainFrame
 local Title = Instance.new("TextLabel")
 Title.Size = UDim2.new(1, 0, 0, 40)
 Title.Position = UDim2.new(0, 0, 0, 0)
-Title.Text = "超级破环零件V3"
+Title.Text = "环绕V3"
 Title.TextColor3 = Color3.fromRGB(101, 67, 33) -- Dark brown
 Title.BackgroundColor3 = Color3.fromRGB(222, 184, 135) -- Lighter brown
 Title.Font = Enum.Font.Fondamento -- More elegant font
@@ -117,7 +117,7 @@ RadiusCorner.Parent = RadiusDisplay
 local Watermark = Instance.new("TextLabel")
 Watermark.Size = UDim2.new(1, 0, 0, 20)
 Watermark.Position = UDim2.new(0, 0, 1, -20)
-Watermark.Text = "黑洞中心813485162"
+Watermark.Text = "由小欣汉化"
 Watermark.TextColor3 = Color3.fromRGB(101, 67, 33) -- Dark brown
 Watermark.BackgroundTransparency = 1
 Watermark.Font = Enum.Font.Fondamento
@@ -231,7 +231,7 @@ end
 local radius = 50
 local height = 100
 local rotationSpeed = 10
-local attractionStrength = 1000
+local attractionStrength = 3000
 local ringPartsEnabled = false
 
 local function RetainPart(Part)
@@ -304,13 +304,13 @@ end)
 
 DecreaseRadius.MouseButton1Click:Connect(function()
     radius = math.max(10, radius - 5)
-    RadiusDisplay.Text = "Radius: " .. radius
+    RadiusDisplay.Text = "半径: " .. radius
     playSound("12221967")
 end)
 
 IncreaseRadius.MouseButton1Click:Connect(function()
     radius = math.min(100, radius + 5)
-    RadiusDisplay.Text = "Radius: " .. radius
+    RadiusDisplay.Text = "半径: " .. radius
     playSound("12221967")
 end)
 
